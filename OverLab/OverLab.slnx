@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OverLab.Core/OverLab.Core.csproj" />
+  <Project Path="OverLab.Wpf/OverLab.Wpf.csproj" />
+</Solution>

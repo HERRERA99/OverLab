@@ -1,0 +1,11 @@
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\bin\Debug\net10.0\OverLab.Core.deps.json
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\bin\Debug\net10.0\OverLab.Core.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\bin\Debug\net10.0\OverLab.Core.pdb
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\OverLab.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\OverLab.Core.AssemblyInfoInputs.cache
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\OverLab.Core.AssemblyInfo.cs
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\OverLab.Core.csproj.CoreCompileInputs.cache
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\OverLab.Core.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\refint\OverLab.Core.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\OverLab.Core.pdb
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Core\obj\Debug\net10.0\ref\OverLab.Core.dll
