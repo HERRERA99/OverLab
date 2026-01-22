@@ -5,11 +5,24 @@
       "OverLab.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "OverLab.Providers": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/OverLab.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/OverLab.Core.dll": {}
+        }
+      },
+      "OverLab.Providers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/OverLab.Providers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OverLab.Providers.dll": {}
         }
       }
     }
@@ -19,6 +32,11 @@
       "type": "project",
       "path": "../OverLab.Core/OverLab.Core.csproj",
       "msbuildProject": "../OverLab.Core/OverLab.Core.csproj"
+    },
+    "OverLab.Providers/1.0.0": {
+      "type": "project",
+      "path": "../OverLab.Providers/OverLab.Providers.csproj",
+      "msbuildProject": "../OverLab.Providers/OverLab.Providers.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OverLab.Wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08157efe118f945e415f9fb3e927f4dbfa59627d")]
 [assembly: System.Reflection.AssemblyProductAttribute("OverLab.Wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OverLab.Wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

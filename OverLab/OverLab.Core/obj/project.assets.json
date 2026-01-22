@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "OverLab.Providers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/OverLab.Providers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OverLab.Providers.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OverLab.Providers/1.0.0": {
+      "type": "project",
+      "path": "../OverLab.Providers/OverLab.Providers.csproj",
+      "msbuildProject": "../OverLab.Providers/OverLab.Providers.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "OverLab.Providers >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\aitor\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\OverLab\\OverLab.Providers\\OverLab.Providers.csproj": {
+              "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\OverLab\\OverLab.Providers\\OverLab.Providers.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

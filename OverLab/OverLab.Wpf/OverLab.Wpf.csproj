@@ -12,4 +12,12 @@
     <ProjectReference Include="..\OverLab.Core\OverLab.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Views\Overlays\OverlayInputsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <XamlRuntime>Wpf</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

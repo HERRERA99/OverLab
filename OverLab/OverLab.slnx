@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="OverLab.Core/OverLab.Core.csproj" />
+  <Project Path="OverLab.Providers/OverLab.Providers.csproj" />
   <Project Path="OverLab.Wpf/OverLab.Wpf.csproj" />
 </Solution>

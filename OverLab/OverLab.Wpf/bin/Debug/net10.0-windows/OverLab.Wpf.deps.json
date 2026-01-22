@@ -15,8 +15,19 @@
         }
       },
       "OverLab.Core/1.0.0": {
+        "dependencies": {
+          "OverLab.Providers": "1.0.0"
+        },
         "runtime": {
           "OverLab.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "OverLab.Providers/1.0.0": {
+        "runtime": {
+          "OverLab.Providers.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -31,6 +42,11 @@
       "sha512": ""
     },
     "OverLab.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OverLab.Providers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
