@@ -54,14 +54,23 @@ public partial class OverlayInputsView : Window
         double w = ActualWidth;
         double h = ActualHeight;
 
-        ThrottlePath.Data = SplineHelper.CreateSmoothCurve(
-            _vm.Samples.Select(s => s.Throttle).ToList(), w, h);
+        // Dibujamos acelerador y freno normalmente
+        ThrottlePath.Data = SplineHelper.CreateSmoothCurve(_vm.Samples.Select(s => s.Throttle).ToList(), w, h);
+        BrakePath.Data = SplineHelper.CreateSmoothCurve(_vm.Samples.Select(s => s.Brake).ToList(), w, h);
 
-        BrakePath.Data = SplineHelper.CreateSmoothCurve(
-            _vm.Samples.Select(s => s.Brake).ToList(), w, h);
-
-        ClutchPath.Data = SplineHelper.CreateSmoothCurve(
-            _vm.Samples.Select(s => s.Clutch).ToList(), w, h);
+        // Lógica para el embrague
+        var clutchValues = _vm.Samples.Select(s => s.Clutch).ToList();
+    
+        // Si el valor máximo es casi 0 (margen de error para sensores), ocultamos el path
+        if (clutchValues.Max() < 0.01f) 
+        {
+            ClutchPath.Visibility = Visibility.Collapsed;
+        }
+        else 
+        {
+            ClutchPath.Visibility = Visibility.Visible;
+            ClutchPath.Data = SplineHelper.CreateSmoothCurve(clutchValues, w, h);
+        }
     }
     
     private void DrawGrid()

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Windows;
 using OverLab.Core.App;
 using OverLab.Core.Telemetry;
 using OverLab.Core.Widgets;
@@ -13,15 +11,46 @@ namespace OverLab.Wpf.ViewModels
         private readonly OverlayController _controller;
         private readonly OverlayId _overlayId;
 
-        public ObservableCollection<float> ThrottleValues { get; } = new();
-        public ObservableCollection<float> BrakeValues { get; } = new();
-        public ObservableCollection<float> ClutchValues { get; } = new();
-
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public bool IsVisible => _controller.GetOverlay(_overlayId).IsVisible;
-        
-        public IReadOnlyList<PedalSample> Samples { get; private set; } = Array.Empty<PedalSample>();
+        // =========================
+        // VISIBILIDAD
+        // =========================
+
+        public bool IsVisible =>
+            _controller.GetOverlay(_overlayId).IsVisible;
+
+        // =========================
+        // DRAG ENABLED
+        // =========================
+
+        private bool _isDragEnabled;
+        public bool IsDragEnabled
+        {
+            get => _isDragEnabled;
+            set
+            {
+                if (_isDragEnabled == value)
+                    return;
+
+                _isDragEnabled = value;
+                OnPropertyChanged(nameof(IsDragEnabled));
+            }
+        }
+
+        // =========================
+        // DATOS
+        // =========================
+
+        public IReadOnlyList<PedalSample> Samples { get; private set; }
+            = Array.Empty<PedalSample>();
+
+        // =========================
+        // CONFIGURACIÓN OVERLAY
+        // =========================
+
+        public OverlayConfiguration Configuration =>
+            _controller.GetOverlay(_overlayId);
 
         public OverlayInputsViewModel(
             OverlayController controller,
@@ -39,25 +68,31 @@ namespace OverLab.Wpf.ViewModels
             {
                 if (id == _overlayId)
                 {
-                    PropertyChanged?.Invoke(
-                        this,
-                        new PropertyChangedEventArgs(nameof(IsVisible))
-                    );
+                    OnPropertyChanged(nameof(IsVisible));
+
+                    // Opcional: desactivar drag al ocultar
+                    if (!IsVisible)
+                        IsDragEnabled = false;
                 }
             };
-
         }
 
         private void OnSamplesUpdated(IReadOnlyList<PedalSample> samples)
         {
             Samples = samples;
-
-            // Notificamos UNA sola vez
-            PropertyChanged?.Invoke(
-                this,
-                new PropertyChangedEventArgs(nameof(Samples))
-            );
+            OnPropertyChanged(nameof(Samples));
         }
 
+        // =========================
+        // HELPERS
+        // =========================
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(
+                this,
+                new PropertyChangedEventArgs(propertyName)
+            );
+        }
     }
 }
