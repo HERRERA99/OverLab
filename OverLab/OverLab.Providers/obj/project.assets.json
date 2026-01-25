@@ -1,47 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {
-      "iRacingSdkWrapper/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "iRSDKSharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/iRacingSdkWrapper.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/iRacingSdkWrapper.dll": {}
-        }
-      },
-      "iRSDKSharp/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/iRSDKSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/iRSDKSharp.dll": {}
-        }
-      }
-    }
+    "net10.0": {}
   },
-  "libraries": {
-    "iRacingSdkWrapper/1.0.0": {
-      "type": "project",
-      "path": "../../SDKs/iRacing/iRacingSdkWrapper/iRacingSdkWrapper.csproj",
-      "msbuildProject": "../../SDKs/iRacing/iRacingSdkWrapper/iRacingSdkWrapper.csproj"
-    },
-    "iRSDKSharp/1.0.0": {
-      "type": "project",
-      "path": "../../SDKs/iRacing/irsdkSharp/iRSDKSharp.csproj",
-      "msbuildProject": "../../SDKs/iRacing/irsdkSharp/iRSDKSharp.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net10.0": [
-      "iRSDKSharp >= 1.0.0",
-      "iRacingSdkWrapper >= 1.0.0"
-    ]
+    "net10.0": []
   },
   "packageFolders": {
     "C:\\Users\\aitor\\.nuget\\packages\\": {}
@@ -69,14 +33,7 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {
-            "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj": {
-              "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj"
-            },
-            "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj": {
-              "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -2,34 +2,9 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "iRacingSdkWrapper/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "iRSDKSharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/iRacingSdkWrapper.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/iRacingSdkWrapper.dll": {}
-        }
-      },
-      "iRSDKSharp/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/iRSDKSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/iRSDKSharp.dll": {}
-        }
-      },
       "OverLab.Providers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "iRSDKSharp": "1.0.0",
-          "iRacingSdkWrapper": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/OverLab.Providers.dll": {}
         },
@@ -40,16 +15,6 @@
     }
   },
   "libraries": {
-    "iRacingSdkWrapper/1.0.0": {
-      "type": "project",
-      "path": "../../SDKs/iRacing/iRacingSdkWrapper/iRacingSdkWrapper.csproj",
-      "msbuildProject": "../../SDKs/iRacing/iRacingSdkWrapper/iRacingSdkWrapper.csproj"
-    },
-    "iRSDKSharp/1.0.0": {
-      "type": "project",
-      "path": "../../SDKs/iRacing/irsdkSharp/iRSDKSharp.csproj",
-      "msbuildProject": "../../SDKs/iRacing/irsdkSharp/iRSDKSharp.csproj"
-    },
     "OverLab.Providers/1.0.0": {
       "type": "project",
       "path": "../OverLab.Providers/OverLab.Providers.csproj",

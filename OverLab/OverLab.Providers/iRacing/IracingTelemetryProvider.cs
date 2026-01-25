@@ -1,6 +1,7 @@
-﻿using OverLab.Providers.Abstractions;
+﻿using System.Timers;
+using OverLab.Providers.Abstractions;
 using OverLab.Providers.Models;
-using iRacingSdkWrapper;
+using System.Timers;
 
 namespace OverLab.Providers.iRacing;
 
@@ -8,36 +9,40 @@ public class IracingTelemetryProvider : ITelemetryProvider
 {
     public event Action<PedalTelemetry>? PedalTelemetryUpdated;
 
-    private readonly SdkWrapper _wrapper;
+    private readonly System.Timers.Timer _timer;
+    
+    private float _throttle;
+    private float _brake;
+    private float _clutch;
 
     public IracingTelemetryProvider()
     {
-        _wrapper = new SdkWrapper();
-
-        // Puedes ajustar esto para pruebas (30 / 60)
-        _wrapper.TelemetryUpdateFrequency = 60;
-
-        _wrapper.TelemetryUpdated += OnTelemetryUpdated;
+        _timer = new System.Timers.Timer(50);
+        _timer.Elapsed += OnTimerElapsed;
     }
 
-    private void OnTelemetryUpdated(object? sender, SdkWrapper.TelemetryUpdatedEventArgs e)
+    private void OnTimerElapsed(object? sender, ElapsedEventArgs e)
     {
-        float throttle = e.TelemetryInfo.Throttle.Value;
-        float brake    = e.TelemetryInfo.Brake.Value;
-    
-        // INVERSIÓN AQUÍ: 1.0 es suelto, 0.0 es pisado. 
-        // Al restar (1 - valor), 1.0 se convierte en 0 (línea abajo).
-        float clutchRaw = e.TelemetryInfo.Clutch.Value;
-        float clutch = 1.0f - clutchRaw; 
+        _throttle = SmoothRandom(_throttle);
+        _brake    = SmoothRandom(_brake);
+        _clutch   = SmoothRandom(_clutch);
 
         PedalTelemetryUpdated?.Invoke(new PedalTelemetry
         {
-            Throttle = throttle,
-            Brake = brake,
-            Clutch = clutch
+            Throttle = _throttle,
+            Brake = _brake,
+            Clutch = _clutch
         });
     }
 
-    public void Start() => _wrapper.Start();
-    public void Stop()  => _wrapper.Stop();
+    private static float SmoothRandom(float current)
+    {
+        float delta = (Random.Shared.NextSingle() - 0.5f) * 0.1f;
+        float next = current + delta;
+
+        return Math.Clamp(next, 0f, 1f);
+    }
+
+    public void Start() => _timer.Start();
+    public void Stop() => _timer.Stop();
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OverLab.Providers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45344da33264979cea87245c2e899c4a90efa9e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08157efe118f945e415f9fb3e927f4dbfa59627d")]
 [assembly: System.Reflection.AssemblyProductAttribute("OverLab.Providers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OverLab.Providers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\SDKs\iRacing\iRacingSdkWrapper\iRacingSdkWrapper.csproj" />
-    <ProjectReference Include="..\..\SDKs\iRacing\irsdkSharp\iRSDKSharp.csproj" />
-  </ItemGroup>
-
 </Project>
