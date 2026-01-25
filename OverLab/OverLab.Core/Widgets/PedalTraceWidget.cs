@@ -10,7 +10,7 @@ public class PedalTraceWidget : IPedalTraceWidget
 
     public event Action<IReadOnlyList<PedalSample>>? SamplesUpdated;
 
-    public PedalTraceWidget(int maxSamples = 50)
+    public PedalTraceWidget(int maxSamples = 200)
     {
         _maxSamples = maxSamples;
         _samples = new Queue<PedalSample>(maxSamples);

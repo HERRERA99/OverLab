@@ -27,3 +27,9 @@ C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab
 C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\obj\Debug\net10.0-windows\OverLab.Wpf.pdb
 C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\obj\Debug\net10.0-windows\OverLab.Wpf.genruntimeconfig.cache
 C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\obj\Debug\net10.0-windows\ref\OverLab.Wpf.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\bin\Debug\net10.0-windows\iRacingSdkWrapper.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\bin\Debug\net10.0-windows\iRSDKSharp.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\bin\Debug\net10.0-windows\YamlDotNet.dll
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\bin\Debug\net10.0-windows\iRacingSdkWrapper.pdb
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\bin\Debug\net10.0-windows\iRSDKSharp.pdb
+C:\Users\aitor\OneDrive\Documentos\ProyectosProgramacion\OverLab\OverLab\OverLab.Wpf\bin\Debug\net10.0-windows\YamlDotNet.xml

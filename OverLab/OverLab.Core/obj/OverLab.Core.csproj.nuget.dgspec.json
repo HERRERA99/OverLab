@@ -366,7 +366,14 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj": {
+                "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj"
+              },
+              "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj": {
+                "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -676,6 +683,38 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         }
+      }
+    },
+    "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj",
+        "projectName": "iRacingSdkWrapper",
+        "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\iRacingSdkWrapper\\iRacingSdkWrapper.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj",
+        "projectName": "iRSDKSharp",
+        "projectPath": "C:\\Users\\aitor\\OneDrive\\Documentos\\ProyectosProgramacion\\OverLab\\SDKs\\iRacing\\irsdkSharp\\iRSDKSharp.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

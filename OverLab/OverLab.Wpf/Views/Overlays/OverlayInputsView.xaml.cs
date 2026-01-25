@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using OverLab.Wpf.Rendering;
@@ -51,22 +52,34 @@ public partial class OverlayInputsView : Window
 
     private void Redraw()
     {
-        double w = ActualWidth;
-        double h = ActualHeight;
+        double w = ActualWidth - 2;
+        double h = ActualHeight - 2;
 
+        // Acelerador y Freno se dibujan normal (incluyendo el 0)
         ThrottlePath.Data = SplineHelper.CreateSmoothCurve(
             _vm.Samples.Select(s => s.Throttle).ToList(), w, h);
 
         BrakePath.Data = SplineHelper.CreateSmoothCurve(
             _vm.Samples.Select(s => s.Brake).ToList(), w, h);
 
-        ClutchPath.Data = SplineHelper.CreateSmoothCurve(
-            _vm.Samples.Select(s => s.Clutch).ToList(), w, h);
+        // ESTRATEGIA PARA EL EMBRAGUE:
+        // Filtramos la lista para que el Spline solo reciba puntos donde el pedal está presionado.
+        // Usamos Select para mantener el índice (posición X) pero ponemos valores "fuera de rango" 
+        // o procesamos segmentos separados.
+    
+        // Si tu SplineHelper no soporta huecos, la forma más limpia es esta:
+        var clutchSamples = _vm.Samples
+            .Select(s => s.Clutch > 0.001f ? s.Clutch : -1.0f) // Marcamos los ceros como -1
+            .ToList();
+
+        ClutchPath.Data = SplineHelper.CreateSmoothCurve(clutchSamples, w, h);
     }
     
     private void DrawGrid()
     {
         GraphCanvas.Children.Clear();
+        
+        GraphCanvas.ClipToBounds = true;
 
         double w = GraphCanvas.ActualWidth;
         double h = GraphCanvas.ActualHeight;
@@ -95,6 +108,4 @@ public partial class OverlayInputsView : Window
         GraphCanvas.Children.Add(BrakePath);
         GraphCanvas.Children.Add(ClutchPath);
     }
-
-
 }

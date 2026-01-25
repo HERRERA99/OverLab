@@ -14,6 +14,22 @@
           "OverLab.Wpf.dll": {}
         }
       },
+      "iRacingSdkWrapper/1.0.0": {
+        "runtime": {
+          "iRacingSdkWrapper.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "iRSDKSharp/1.0.0": {
+        "runtime": {
+          "iRSDKSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "OverLab.Core/1.0.0": {
         "dependencies": {
           "OverLab.Providers": "1.0.0"
@@ -26,10 +42,22 @@
         }
       },
       "OverLab.Providers/1.0.0": {
+        "dependencies": {
+          "iRSDKSharp": "1.0.0",
+          "iRacingSdkWrapper": "1.0.0"
+        },
         "runtime": {
           "OverLab.Providers.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "YamlDotNet/16.0.0.0": {
+        "runtime": {
+          "YamlDotNet.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.3.0.0"
           }
         }
       }
@@ -41,6 +69,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "iRacingSdkWrapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "iRSDKSharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "OverLab.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -48,6 +86,11 @@
     },
     "OverLab.Providers/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "YamlDotNet/16.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
